@@ -231,6 +231,9 @@ a:focus {
         margin-left: -10px;
         line-height: 30px;
       }
+      iframe{
+          display: none;
+      }
 }
 @media (min-width: 992px) {
     .navbar {
