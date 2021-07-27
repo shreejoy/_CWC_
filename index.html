@@ -2,13 +2,13 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title> CWC - Way to Integrity </title>
+        <title> CWC - Wizards of Coding Mansion </title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Free Website Template" name="keywords">
         <meta content="Free Website Template" name="description">
 
         <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon">
+        <link href="/cwc_logo.png" rel="icon">
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -69,6 +69,7 @@
                         </ul>
                         <a href="#review" class="nav-item nav-link">Organisers</a>
                         <a href="#contact" class="nav-item nav-link">Contact</a>
+                        <img src="./img/moon.png" alt="dark" id="icon" >
                     </div>
                 </div>
             </div>
@@ -761,5 +762,15 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+        <script>
+            var icon = document.getElementById("icon");
+            icon.onclick  = function(){
+                document.body.classList.toggle("dark-theme");
+                if(document.body.classList.contains("dark-theme"))
+                    icon.src="./img/sun.png";
+                else
+                    icon.src="./img/moon.png";
+            }
+        </script>
     </body>
 </html>
