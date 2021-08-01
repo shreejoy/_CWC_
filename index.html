@@ -21,6 +21,17 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+        <style>
+            @media (max-width: 992px) {
+            .navbar .ml-auto .nav-item {
+                color: var(--secondary-color);
+            }
+        }
+
+        .navbar-light .navbar-nav .nav-link:hover{
+            color: red;
+        }
+        </style>
     </head>
 
     <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -34,10 +45,10 @@
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
-                        <a href="#home" class="nav-item nav-link active">Home</a>
+                        <a href="#home" class="nav-item nav-link ">Home</a>
                         <a href="#service" class="nav-item nav-link">Fields</a>
-                        <a href="#experience" class="nav-item nav-link">Projects</a>
-                        <a href="#portfolio" class="nav-item nav-link">Members</a>
+                        <a href="#experience" class="nav-item nav-link" >Projects</a>
+                        <a href="#portfolio" class="nav-item nav-link" >Members</a>
                         <a href="https://cwc-agdoc.netlify.app/" target="_blank" class="nav-item nav-link">AGDOC</a>
                         <ul class="nav-item nav-link">
                             <li style="list-style-type: none;" class="dropdown">
@@ -67,8 +78,8 @@
                             </div>
                             </li>
                         </ul>
-                        <a href="#review" class="nav-item nav-link">Organisers</a>
-                        <a href="#contact" class="nav-item nav-link">Contact</a>
+                        <a href="#review" class="nav-item nav-link" >Organisers</a>
+                        <a href="#contact" class="nav-item nav-link" >Contact</a>
                         <img src="./img/moon.png" alt="dark" id="icon" >
                     </div>
                 </div>

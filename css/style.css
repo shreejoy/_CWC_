@@ -2,13 +2,14 @@
 /********* General CSS *********/
 /*******************************/
 :root{
-    --primary-color: rgb(255, 255, 255);
-    --secondary-color: rgb(100, 100, 100);
+    --primary-color: rgb(231, 231, 225);
+    --secondary-color: rgb(24, 24, 24);
 }
 
 .dark-theme{
-    --primary-color: rgb(82, 80, 80);
-    --secondary-color:#fff;
+    --primary-color: rgb(14, 13, 13);
+    --secondary-color:rgb(226, 226, 224);
+    transition: 0.8s;
 }
 
 body {
@@ -151,13 +152,14 @@ a:focus {
     transition: .5s;
     z-index: 999;
 }
+
 #icon{
     width: 30px;
     height: 30px;
     margin-top: 10px;
     margin-left: 10px;
     cursor: pointer;
-    background: #777777;
+    background: var(--secondary-color);
 }
 
 .navbar-nav ul {
@@ -172,7 +174,7 @@ a:focus {
   }
   
   .navbar-nav li a,.navbar-nav .dropbtn {
-    color: white;
+    color: rgb(255, 254, 254);
     text-align: center;
     padding: 10px 16px;
     text-decoration: none;
@@ -205,7 +207,9 @@ a:focus {
     text-align: left;
   }
   
-  .navbar-nav .dropdown-content a:hover {background-color: #f1f1f1;border-radius: 10px;}
+  .navbar-nav .dropdown-content a:hover {
+      color: #f1f1f1;border-radius: 10px;
+    }
   
   .navbar-nav .dropdown:hover .dropdown-content {
     display: block;
@@ -241,8 +245,13 @@ a:focus {
 }
 
 @media (max-width:992px){
+    .navbar {
+        background: transparent !important;
+        color: var(--secondary-color);
+    }
+
     .navbar-nav li a,.navbar-nav .dropbtn {
-        color: rgb(133, 133, 133);
+        color: var(--secondary-color);
         text-decoration: none;
         margin-left: -10px;
         line-height: 30px;
@@ -254,9 +263,9 @@ a:focus {
 @media (min-width: 992px) {
     .navbar {
         position: absolute;
+        background: transparent !important;
         width: 100%;
         padding: 10px 60px;
-        background: transparent !important;
         border-bottom: 1px dashed rgba(256, 256, 256, .2);
         z-index: 9;
     }
@@ -303,7 +312,10 @@ a:focus {
 @media (max-width: 991.98px) {   
     .navbar {
         padding: 15px;
-        background: #ffffff !important;
+    }
+
+    .navbar-toggler{
+        background: gray;
     }
     
     .navbar .navbar-brand {
@@ -857,8 +869,10 @@ a:focus {
 
 .service .service-text {
     position: relative;
+    color: #ce4a29;
     width: calc(100% - 120px);
     padding: 0 30px;
+    font-weight: 700;
 }
 
 .service .service-text h3 {
@@ -1081,7 +1095,7 @@ a:focus {
     margin-top: -70px;
     padding: 65px 35px 30px 35px;
     text-align: center;
-    background: #ffffff;
+    background: #807d7d;
     border-radius: 500px;
 }
 
@@ -1091,14 +1105,17 @@ a:focus {
 }
 
 .testimonial .testimonial-text h3 {
-    color: #EF233C;
+    color: rgb(233, 231, 231);
+    text-shadow: 2px 2px rgb(0, 0, 0);
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
 .testimonial .testimonial-text h4 {
-    color: #d30000;
+    color: #b60c0c;
+    font-weight: 800;
+    text-shadow: 0.5px 0.5px 1px #fcfbfb;
     font-size: 14px;
     margin-bottom: 0;
 }
