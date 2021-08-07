@@ -1,23 +1,33 @@
 /*******************************/
 /********* General CSS *********/
 /*******************************/
+:root{
+    --primary-color: rgb(231, 231, 225);
+    --secondary-color: rgb(24, 24, 24);
+}
+
+.dark-theme{
+    --primary-color: rgb(14, 13, 13);
+    --secondary-color:rgb(226, 226, 224);
+    transition: 0.8s;
+}
+
 body {
-    color: #797979;
-    background: #0a0a0a;
+    background: var(--primary-color) url(../img/pattern.png) repeat;
     font-family: 'Montserrat', sans-serif;
 }
+
 
 h1,
 h2, 
 h3, 
-h4,
 h5, 
 h6 {
-    color: #414141;
+    color: var(--secondary-color);
 }
 
 a {
-    color: #313131;
+    color: #555;
     transition: .3s;
 }
 
@@ -47,7 +57,7 @@ a:focus {
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 1px;
-    color: #ffffff;
+    color: var(--secondary-color);
     background: #EF233C;
     border: 2px solid transparent;
     border-radius: 0;
@@ -143,6 +153,15 @@ a:focus {
     z-index: 999;
 }
 
+#icon{
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    background: var(--secondary-color);
+}
+
 .navbar-nav ul {
     list-style-type: none;
     margin: 0;
@@ -153,10 +172,9 @@ a:focus {
     position:relative;
     text-shadow: none;
   }
-
   
   .navbar-nav li a,.navbar-nav .dropbtn {
-    color: white;
+    color: rgb(255, 254, 254);
     text-align: center;
     padding: 10px 16px;
     text-decoration: none;
@@ -175,7 +193,7 @@ a:focus {
     display: none;
     position: absolute;
     background-color: #969696;
-    min-width: 10px;
+    min-width: 20px;
     border-radius: 10px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -189,7 +207,9 @@ a:focus {
     text-align: left;
   }
   
-  .navbar-nav .dropdown-content a:hover {background-color: #f1f1f1;border-radius: 10px;}
+  .navbar-nav .dropdown-content a:hover {
+      color: #f1f1f1;border-radius: 10px;
+    }
   
   .navbar-nav .dropdown:hover .dropdown-content {
     display: block;
@@ -225,19 +245,27 @@ a:focus {
 }
 
 @media (max-width:992px){
+    .navbar {
+        background: transparent !important;
+        color: var(--secondary-color);
+    }
+
     .navbar-nav li a,.navbar-nav .dropbtn {
-        color: rgb(133, 133, 133);
+        color: var(--secondary-color);
         text-decoration: none;
         margin-left: -10px;
         line-height: 30px;
+      }
+      iframe{
+          display: none;
       }
 }
 @media (min-width: 992px) {
     .navbar {
         position: absolute;
+        background: transparent !important;
         width: 100%;
         padding: 10px 60px;
-        background: transparent !important;
         border-bottom: 1px dashed rgba(256, 256, 256, .2);
         z-index: 9;
     }
@@ -259,7 +287,7 @@ a:focus {
     .navbar-light .navbar-nav .nav-link:focus {
         padding: 10px 10px 8px 10px;
         color: #ffffff;
-        font-size: 20px;
+        font-size: 22px;
         font-weight: 800;
     }
     
@@ -284,7 +312,10 @@ a:focus {
 @media (max-width: 991.98px) {   
     .navbar {
         padding: 15px;
-        background: #ffffff !important;
+    }
+
+    .navbar-toggler{
+        background: gray;
     }
     
     .navbar .navbar-brand {
@@ -356,7 +387,7 @@ a:focus {
     display: inline-block;
     margin: 0;
     height: 35px;
-    color: #ffffff;
+    color: rgb(248, 245, 245);
     font-size: 40px;
     font-weight: 600;
 }
@@ -521,6 +552,10 @@ a:focus {
     margin: -45px 0 45px 0;
 }
 
+.about a{
+    border-radius: 20px;
+}
+
 .about .col-lg-6 {
     padding: 0;
 }
@@ -583,7 +618,10 @@ a:focus {
     border-radius: 10px;
     transition: 2s;
 }
-
+.about .about-text p{
+    color: var(--secondary-color);
+    font-weight: 600;
+}
 .about .about-text a.btn {
     margin-top: 15px;
 }
@@ -601,11 +639,22 @@ a:focus {
 .experience {
     position: relative;
     padding: 45px 0 15px 0;
+    color: #080406;
 }
 
 .experience .timeline {
     position: relative;
     width: 100%;
+}
+
+.experience .timeline .timeline-text{
+    border-radius: 20px;
+}
+
+.experience .timeline .timeline-text:hover{
+    transform:scale(1.1);
+    transition: 0.5s;
+    font-size: 22px;
 }
 
 .experience .timeline::after {
@@ -791,11 +840,14 @@ a:focus {
 
 .service .service-item:hover {
     box-shadow: inset 800px 0 0 0 #EF233C;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
 .service .service-icon {
     position: relative;
     width: 150px;
+    border-top-left-radius: 30px;
     min-height: 150px;
     display: flex;
     align-items: center;
@@ -817,8 +869,10 @@ a:focus {
 
 .service .service-text {
     position: relative;
+    color: #ce4a29;
     width: calc(100% - 120px);
     padding: 0 30px;
+    font-weight: 700;
 }
 
 .service .service-text h3 {
@@ -874,7 +928,7 @@ a:focus {
     padding: 6px 12px;
     font-size: 14px;
     font-weight: 600;
-    color: #ffffff;
+    color: #d42d2d;
     background: #EF233C;
     border: 2px solid transparent;
     border-radius: 0;
@@ -886,10 +940,14 @@ a:focus {
 
 .portfolio #portfolio-filter li:hover,
 .portfolio #portfolio-filter li.filter-active {
-    color: #EF233C;
+    color: var(--secondary-color);
     background: transparent;
     box-shadow: inset 0 0 0 0 #EF233C;
     border-color: #EF233C;
+}
+
+.portfolio #portfolio-filter li:hover{
+    background: #eb0101;
 }
 
 .portfolio .portfolio-item {
@@ -904,29 +962,32 @@ a:focus {
 .portfolio .portfolio-img {
     position: relative;
     overflow: hidden;
+    border-radius: 30px;
 }
 
 .portfolio .portfolio-img img {
     position: relative;
-    width: 100%; 
-    height: 100%; 
+    width: 90%; 
+    height: 90%; 
     object-fit: cover;
     transform: scale(1.1);
     transition: .5s;
 }
 
-.portfolio .portfolio-item:hover img {
-    margin-left: 15px;
+.portfolio .portfolio-item:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
 }
 
 .portfolio .portfolio-text {
     position: relative;
     height: 60px;
+    border-radius: 20px;
     width: calc(100% - 30px);
     margin: -30px 15px 30px 15px;
     display: flex;
     align-items: center;
-    background: #ffffff;
+    background: var(--primary-color);
     box-shadow: 0 0 15px rgba(0, 0, 0, .12);
 }
 
@@ -940,8 +1001,10 @@ a:focus {
 }
 
 .portfolio .portfolio-text a.btn {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: 1px 2px 1px 1px rgb(80, 79, 79);
     padding: 0 0 2px 1px;
     display: flex;
     align-items: center;
@@ -955,64 +1018,6 @@ a:focus {
     background: transparent;
     box-shadow: inset 0 0 0 0 #EF233C;
     border-color: #EF233C;
-}
-
-
-/*******************************/
-/********* Banner CSS **********/
-/*******************************/
-.banner {
-    position: relative;
-    width: 100%;
-    margin: 45px 0;
-    padding: 90px 0;
-    background: #EF233C;
-}
-
-.banner .container {
-    max-width: 750px;
-    text-align: center;
-}
-
-.banner .section-header {
-    margin-bottom: 20px;
-}
-
-.banner .section-header p {
-    color: #414141;
-    background: transparent;
-}
-
-.banner .section-header p::after {
-    display: none;
-}
-
-.banner .section-header h2 {
-    color: #ffffff;
-}
-
-.banner .section-header h2 span {
-    color: #414141;
-    font-size: 50px;
-}
-
-.banner .banner-text p {
-    font-size: 18px;
-    color: #ffffff;
-}
-
-.banner .banner-text .btn {
-    margin-top: 15px;
-    color: #EF233C;
-    background: #ffffff;
-    box-shadow: inset 0 0 0 50px #ffffff;
-}
-
-.banner .banner-text .btn:hover {
-    color: #ffffff;
-    background: transparent;
-    box-shadow: inset 0 0 0 0 #ffffff;
-    border-color: #ffffff;
 }
 
 @media(max-width: 575.98px) {
@@ -1044,6 +1049,7 @@ a:focus {
     position: relative;
     margin: 45px 0;
     padding: 90px 0;
+    border-radius: 20px;
     background: #555;
 }
 
@@ -1059,6 +1065,9 @@ a:focus {
 .testimonial .testimonial-icon i {
     font-size: 60px;
     color: rgba(256, 256, 256, .5);
+}
+.testimonial-icon h2{
+    color: #1e1f20;
 }
 
 .testimonial .testimonial-item {
@@ -1077,7 +1086,7 @@ a:focus {
     margin: 0 auto;
     width: 120px;
     padding: 10px;
-    border: 5px dotted #ffffff;
+    border: 3px solid #ffffff;
     border-radius: 100px;
 }
 
@@ -1086,7 +1095,7 @@ a:focus {
     margin-top: -70px;
     padding: 65px 35px 30px 35px;
     text-align: center;
-    background: #ffffff;
+    background: #807d7d;
     border-radius: 500px;
 }
 
@@ -1096,14 +1105,17 @@ a:focus {
 }
 
 .testimonial .testimonial-text h3 {
-    color: #EF233C;
+    color: rgb(233, 231, 231);
+    text-shadow: 2px 2px rgb(0, 0, 0);
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
 .testimonial .testimonial-text h4 {
-    color: #666666;
+    color: #b60c0c;
+    font-weight: 800;
+    text-shadow: 0.5px 0.5px 1px #fcfbfb;
     font-size: 14px;
     margin-bottom: 0;
 }
@@ -1126,6 +1138,21 @@ a:focus {
     background: #ffffff;
 }
 
+/*******************************/
+/********* E-Learning *********/
+/*******************************/
+
+.E-Learning{
+    margin-left: 30%;
+    font-size: 30px;
+    font-weight: 600;
+    list-style: none;
+}
+
+.E-Learning .topic{
+    font-weight: 900;
+    color: rgb(205, 86, 50);
+}
 
 /*******************************/
 /********* Contact CSS *********/
@@ -1133,6 +1160,7 @@ a:focus {
 .contact {
     position: relative;
     width: 100%;
+    border-radius: 20px;
     margin: 45px 0;
     background: #555;
 }
@@ -1141,9 +1169,9 @@ a:focus {
     background: url(../img/soa_logo.png) left center no-repeat;
     
 } */
-
 .contact .contact-form {
     position: relative;
+    border-radius: 20px;
     padding: 90px 0 90px 45px;
     background: #555;
 }
@@ -1179,6 +1207,7 @@ a:focus {
 
 .contact .contact-form .btn {
     margin-top: 35px;
+    border-radius: 20px;
     color: #EF233C;
     background: #ffffff;
     box-shadow: inset 0 0 0 50px #ffffff;
@@ -1215,6 +1244,8 @@ a:focus {
 /*******************************/
 .footer {
     position: relative;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
     margin-top: 45px;
     background: #555;
 }
@@ -1283,7 +1314,7 @@ a:focus {
 }
 
 .footer .footer-social a:hover i {
-    color: #414141;
+    color: #979494;
 }
 
 .footer .copyright {

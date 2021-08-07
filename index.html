@@ -2,13 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title> CWC - Way to Integrity </title>
+        <title> CWC - Wizards of Coding Mansion </title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Free Website Template" name="keywords">
-        <meta content="Free Website Template" name="description">
 
         <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon">
+        <link href="/cwc_logo.png" rel="icon">
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -21,6 +19,17 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+        <style>
+            @media (max-width: 992px) {
+            .navbar .ml-auto .nav-item {
+                color: var(--secondary-color);
+            }
+        }
+
+        .navbar-light .navbar-nav .nav-link:hover{
+            color: red;
+        }
+        </style>
     </head>
 
     <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -34,10 +43,10 @@
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
-                        <a href="#home" class="nav-item nav-link active">Home</a>
+                        <a href="#home" class="nav-item nav-link ">Home</a>
                         <a href="#service" class="nav-item nav-link">Fields</a>
-                        <a href="#experience" class="nav-item nav-link">Projects</a>
-                        <a href="#portfolio" class="nav-item nav-link">Members</a>
+                        <a href="#experience" class="nav-item nav-link" >Projects</a>
+                        <a href="#portfolio" class="nav-item nav-link" >Members</a>
                         <a href="https://cwc-agdoc.netlify.app/" target="_blank" class="nav-item nav-link">AGDOC</a>
                         <ul class="nav-item nav-link">
                             <li style="list-style-type: none;" class="dropdown">
@@ -46,12 +55,12 @@
                                 <a href="https://www.youtube.com/playlist?list=PLsyeobzWxl7oZ-fxDYkOToURHhMuWD1BK" target="_blank">Java</a>
                                 <a href="https://www.youtube.com/playlist?list=PLBlnK6fEyqRggZZgYpPMUxdY1CYkZtARR" target="_blank">C</a>
                                 <a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME" target="_blank">Python</a>
-                                <a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg" target="_blank">HTML/CSS/JS</a>
                                 <a href="https://www.youtube.com/watch?v=cQepf9fY6cE&list=PLS1QulWo1RIYmaxcEqw5JhK3b-6rgdWO_" target="_blank">Shell Script</a>
                                 <a href="https://www.youtube.com/watch?v=roDz8mMvbIg&list=PLknSwrodgQ72X4sKpzf5vT8kY80HKcUSe" target="_blank">Android</a>
                                 <a href="https://www.youtube.com/watch?v=tMZn54M8tGU&list=PLfP3JxW-T70Hh7j17_NLzjZ8CejSPx40V" target="_blank">ML</a>
                                 <a href="https://www.youtube.com/watch?v=PPLop4L2eGk&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN" target="_blank">Advanced ML</a>
                                 <a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg" target="_blank">Web Dev</a>
+                                <a href="sites_iframe.html" target="_blank">More..</a>
                                 </div>
                             </li>
                         </ul>
@@ -61,11 +70,15 @@
                                 <div class="dropdown-content">
                                 <a href="https://cognitiveclass.ai/courses/python-for-data-science" target="_blank">IBM's Python</a>
                                 <a href="https://www.coursera.org/search?query=ml&page=1">ML Coursera</a>
-                                </div>
+                                <a href="https://learning.tcsionhub.in/iDH/India/">TCS ION</a>  
+                                <a href="https://www.elementsofai.com/">Elements Of AI</a> 
+                                 <a href="https://app.korbit.ai/tutor/home">Korbit AI</a>
+                            </div>
                             </li>
                         </ul>
-                        <a href="#review" class="nav-item nav-link">Organisers</a>
-                        <a href="#contact" class="nav-item nav-link">Contact</a>
+                        <a href="#review" class="nav-item nav-link" >Organisers</a>
+                        <a href="#contact" class="nav-item nav-link" >Contact</a>
+                        <img src="./img/moon.png" alt="dark" id="icon" >
                     </div>
                 </div>
             </div>
@@ -267,7 +280,7 @@
                 <div class="row">
                     <div class="col-12">
                         <ul id="portfolio-filter">
-                            <li data-filter="*" class="filter-active">All</li>
+                            <li data-filter="*" class="filter-active">Click to Unstack Images</li>
                         </ul>
                     </div>
                 </div>
@@ -758,5 +771,15 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+        <script>
+            var icon = document.getElementById("icon");
+            icon.onclick  = function(){
+                document.body.classList.toggle("dark-theme");
+                if(document.body.classList.contains("dark-theme"))
+                    icon.src="./img/sun.png";
+                else
+                    icon.src="./img/moon.png";
+            }
+        </script>
     </body>
 </html>
