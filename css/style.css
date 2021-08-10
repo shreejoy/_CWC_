@@ -976,7 +976,7 @@ a:focus {
 
 .portfolio .portfolio-item:hover {
     transform: scale(1.1);
-    transition: 0.5s;
+    transition: 0.9s;
 }
 
 .portfolio .portfolio-text {
