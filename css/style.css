@@ -1154,6 +1154,13 @@ a:focus {
     color: rgb(205, 86, 50);
 }
 
+@media (max-width: 767.98px) {
+    .E-Learning{
+        margin-left: 10%;
+        font-size: 20px;
+    }
+}
+
 /*******************************/
 /********* Contact CSS *********/
 /*******************************/
