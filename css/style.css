@@ -3,11 +3,11 @@
 /*******************************/
 :root{
     --primary-color: rgb(231, 231, 225);
-    --secondary-color: rgb(24, 24, 24);
+    --secondary-color: rgb(109, 109, 109);
 }
 
 .dark-theme{
-    --primary-color: rgb(107, 104, 104);
+    --primary-color: rgb(85, 84, 84);
     --secondary-color:rgb(226, 226, 224);
     transition: 0.8s;
 }
@@ -1128,7 +1128,7 @@ a:focus {
     margin-top: -70px;
     padding: 65px 35px 30px 35px;
     text-align: center;
-    background: #4e4d4d;
+    background: #868686;
     border-radius: 500px;
 }
 
