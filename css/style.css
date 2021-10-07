@@ -3,11 +3,11 @@
 /*******************************/
 :root{
     --primary-color: rgb(231, 231, 225);
-    --secondary-color: rgb(109, 109, 109);
+    --secondary-color: rgb(73, 73, 73);
 }
 
 .dark-theme{
-    --primary-color: rgb(85, 84, 84);
+    --primary-color: rgb(56, 56, 56);
     --secondary-color:rgb(226, 226, 224);
     transition: 0.8s;
 }
